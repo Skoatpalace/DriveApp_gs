@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script>
+      var data = <?!= JSON.stringify(data) ?>;
+      console.log(data);
+      function redirector(){
+        document.getElementById('message').innerHTML = '<a href="'+data.url+'" target="_blank">'+data.term+'</a>';
+      }
+      window.onload = redirector;
+    </script>
+  </head>
+  <body>
+    <div id="message"></div>
+  </body>
+</html>
+
+
